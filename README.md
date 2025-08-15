@@ -36,24 +36,24 @@ echo "PORT=3000" >> .env
 echo "API_KEY=your_secret_key" >> .env
 
 # Start the API
-node scraper.js<br>
+node scraper.js  
 ```
 ## Environment Variables
-You need to create a .env file in the root folder and add:
+You need to create a `.env` file in the root folder and add:
 ```
 API_KEY=your_secret_api_key
 PORT=3000
 ```
-API_KEY: The secret key required to access the API.<br>
-PORT: Port for running the API locally (default is 3000).<br>
+API_KEY: The secret key required to access the API.  
+PORT: Port for running the API locally (default is 3000).  
 When deployed on Railway, set these variables in the Railway Dashboard → Variables section instead of using .env.
 ## API Usage
 Endpoint:
 ```
-GET /scrape?url=<target_website><br>
+GET /scrape?url=<target_website>  
 ```
-**Headers:**
-x-api-key: your_secret_key<br>
+**Headers:**  
+x-api-key: your_secret_key  
 **Example Request:**
 ```
 curl -H "x-api-key: mySuperSecretKey123" \
@@ -61,7 +61,7 @@ curl -H "x-api-key: mySuperSecretKey123" \
 ```
   
 **Example Response:**
-```
+```json
 {
   "title": "Example Domain",
   "description": "This domain is for use in illustrative examples..."
